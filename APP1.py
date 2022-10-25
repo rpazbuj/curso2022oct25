@@ -25,3 +25,7 @@ def contacto():
 @APP1.route("/admin")
 def admin():
     return render_template("base.html")
+
+@APP1.errorhandler(404)
+def error(error):
+    return render_template("page_not_found.html"),404
